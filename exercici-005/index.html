@@ -1,38 +1,51 @@
 <!doctype html>
 <html lang="ca">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Transicions</title>
-  <link rel="stylesheet" href="estils.css">
-</head>
-<body>
-  <nav>
-    <a href="index.html" class="active">Home</a>
-    <a href="galeria.html">Galeria</a>
-    <a href="guia-estil.html">Guia</a>
-  </nav>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Transicions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estils.css">
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="galeria.html">Galeria</a>
+      <a href="guia-estil.html">Guia</a>
+    </nav>
 
-  <section class="hero">
-    <h1>Transicions</h1>
-    <p>Exemple de targetes amb transicions.</p>
-    <a class="cta" href="#cards">
-      <span class="material-symbols-outlined">play_arrow</span> Comença
-    </a>
-  </section>
+    <section class="hero">
+      <h1>Transicions</h1>
+      <p>Exemple de targetes amb transicions.</p>
+      <a class="cta" href="#cards">
+        <span class="material-symbols-outlined">play_arrow</span> Comença
+      </a>
+    </section>
 
-  <section id="cards" class="cards">
-    <div class="card">
-      <img class="main" src="assets/img/cat1.png">
-      <img class="alt" src="assets/img/cat2.png">
-    </div>
-    <div class=".card transform">
-      <img class="main" src="assets/img/cat3.png">
-    </div>
-    <div class="card1">
-      <img  src="assets/img/cat1.png">
-      <img class="alt" src="assets/img/cat3.png">
-    </div>
-  </section>
-</body>
+    <section id="cards" class="cards">
+      <div class="card">
+        <img class="main" src="assets/img/cat1.png"height="150" width="100">
+        <img class="alt" src="assets/img/cat2.png"height="150" width="150">
+      </div>
+      <div class="card1 transform">
+        <img class="main" src="assets/img/cat3.png" height="130" width="150">
+        <img class="alt" src="assets/img/cat1.png" height="130" width="150">
+      </div>
+      <div class="card1">
+        <img  src="assets/img/cat4.png"height="130" width="150">
+        <img class="alt" src="assets/img/cat4.png"height="130" width="150">
+      </div>
+    </section>
+    <nav>
+      <ul class="menu-secundari">
+        <li><a href="#">Inici</a></li>
+        <li><a href="#">Serveis</a></li>
+        <li><a href="#">Portfoli</a></li>
+        <li><a href="#">Sobre nosaltres</a></li>
+        <li><a href="#">Contacte</a></li>
+      </ul>
+    </nav>
+  </body>
 </html>
