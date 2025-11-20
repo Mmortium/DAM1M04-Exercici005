@@ -18,6 +18,7 @@ nav {
   background: rgba(255,255,255,0.8);
   backdrop-filter: blur(4px);
   padding: 0.5rem;
+  z-index: 1000;
 }
 nav a {
   text-decoration: none;
@@ -66,7 +67,7 @@ nav a.active { color: #2dd4bf; }
 
 .cards1 { display: flex; gap: 100px; padding: 100px; stroke-width: 50%; }
 .card1 {
-  flex: 1 1 10px;
+  flex: 1 1 5px;
   border-radius: 50px;
   box-shadow: 0 4px 15px rgba(252, 1, 1, 0.4);
   overflow:hidden;
@@ -74,20 +75,61 @@ nav a.active { color: #2dd4bf; }
 }
 .card1:hover { transform: scale(1.05); box-shadow: 0 4px 15px rgba(106, 252, 3, 0.4); }
 .card1 img { width: 100%; height: 100%; transition: opacity 0.5s; }
-.card1 img.back { opacity: 0; }
+/*.card1 img.back { opacity: 0; }*/
 .card1:hover img.front { opacity: 0; } 
-.card1:hover img.back { opacity: 1; }
+/*.card1:hover img.back { opacity: 0; }*/
 .card1:hover .transform { transform: rotateY(180deg); } 
 
 /*Transform (rotació + escala) */
-.transform {
+.card2 {
+
+}
+.flip {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  width: 25%;
+
   border-radius: 80px;
   align-content:center;
-  transition: transform 0.8s ease;
+  position: relative;
 }
-.transform:hover {
-  transform: rotate(-90deg) scale(1.2);
+
+.flip > div {
+   border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(252, 1, 1, 0.4);
+  overflow:hidden;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  position:absolute;
+}
+
+.flip:hover .front {
   transform: rotateY(180deg);
+}
+.flip:hover .back {
+  transform: rotateY(0deg);
+}
+.flip .front {
+  background-image: url("assets/img/cat1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+.flip .back {
+  background-image: url("assets/img/cat3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  top: 0px;
+  position:absolute;
+  transform: rotateY(180deg);
+  width: 100%;
+  height: 100%;
 }
 /* Animaciones */
 .loader {
@@ -132,6 +174,7 @@ nav a.active { color: #2dd4bf; }
   font-family: 'Segoe UI', Arial, sans-serif;
   font-size: 1.1rem;
   font-weight: 500;
+
 }
 
 .menu-secundari li {
@@ -256,12 +299,12 @@ nav a.active { color: #2dd4bf; }
 }
 /* Contingut abans per tenir scroll */
 .spacerTop {
-  height: 50vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.3rem;
-  color: #666;
+  color: #020202;
 }
 
 /* Secció d'animació - es mou amb el flux de la pàgina */
