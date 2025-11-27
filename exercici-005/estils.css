@@ -238,8 +238,8 @@ nav a.active { color: #2dd4bf; }
   color: #222;
   display: flex;
   justify-content: center;
-  align-items:flex;
-  height: 100vh;
+  align-items:center;
+  height: 134vh;
   flex-direction: column;
 }
  /* ─── ELEMENT ANIMAT ─── */
@@ -278,22 +278,22 @@ nav a.active { color: #2dd4bf; }
 }
 @keyframes bounceAndSpin {
   0% {
-    transform: translateY(0) rotate(0deg) scale(1);
+    transform: translateY(0) spin(0deg) scale(1);
     background-color: #e74c3c;
     border-radius: 50%;
   }
   20% {
-    transform: translateX(200px) rotate(90deg) scale(1.2);
+    transform: translateX(300px) rotate(90deg) scale(2);
     background-color: #3fe73c;
     border-radius: 50%;
   }
   40% {
-    transform: translateY(-200px) rotate(180deg) scale(0.8);
+    transform: translateY(-200px) spin(180deg) scale(2.5);
     background-color: #3c4ae7;
     border-radius: 0%;
   }
   60% {
-    transform: translateX(-200px) rotate(360deg) scale(1.2);
+    transform: translateX(-200px) rotate(360deg) scale(3);
     border-radius: 50%;
   }
 }
@@ -312,35 +312,36 @@ nav a.active { color: #2dd4bf; }
         transform: translateY(50px);
     }
     to {
-        opacity: 1;
+        opacity: 5;
         transform: translateY(0);
+        
     }
 }
 
 /* 2. Aplicamos la animación al elemento con la clase .animated-box */
 .animated-box {
-    background-color: #007BFF;
-    color: white;
-    padding: 20px;
-    margin: 50px auto;
-    width: 40%;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 
-    /* Aplica la animación definida arriba */
-    animation-name: fade-in-up;
-    /* La duración es irrelevante para este efecto, ya que el scroll la controla */
-    animation-duration: 1s; 
-    /* Importante: Mantiene el estado final de la animación (visible) */
-    animation-fill-mode: forwards; 
+  background-color: #003057;
+  color: white;
+  padding: 20px;
+  margin: 80px auto;
+  width: 40%;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+
+  /* Aplica la animación definida arriba */
+  animation-name: fade-in-up;
+  /* La duración es irrelevante para este efecto, ya que el scroll la controla */
+  animation-duration: 1s; 
+  /* Importante: Mantiene el estado final de la animación (visible) */
+  animation-fill-mode: forwards; 
     
-    /* Vincula la animación al movimiento del scroll */
-    animation-timeline: view(); 
-    /* Rango opcional: empieza cuando el 5% del elemento entra, termina cuando el 50% entra */
-    animation-range: entry 10% cover 100%;
+  /* Vincula la animación al movimiento del scroll */
+  animation-timeline: view(); 
+  /* Rango opcional: empieza cuando el 5% del elemento entra, termina cuando el 50% entra */
+  animation-range: entry 10% cover 100%;
 }
-/* SCROLL-DRIVEN ANIMATIONS (Safari 26+, Chrome 115+) */
 
 .pixelify-sans {
   font-family: "Pixelify Sans", sans-serif;
